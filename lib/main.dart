@@ -17,7 +17,6 @@ import 'package:hexcolor/hexcolor.dart';
 void main() async
 {
   //method use when main is async
-  //بيتاكد ان كل حاجه خلصت فى الميثود بعدين يفتح الابلكيشن
   WidgetsFlutterBinding.ensureInitialized() ;
   HttpOverrides.global = MyHttpOverrides();
   Bloc.observer = MyBlocObserver();
