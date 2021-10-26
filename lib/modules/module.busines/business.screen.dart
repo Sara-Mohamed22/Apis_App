@@ -10,13 +10,16 @@ class BusinessScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<  NewCubit ,NewsStates   >(
+    return BlocConsumer< NewCubit ,NewsStates  >(
       listener: (context , state ){},
       builder: (context , state){
+
         var list = NewCubit.get(context).business ;
         return ConditionalBuilder(
 
-        condition: state is! NewsGetBusinessLoadingState ,
+        condition:
+           list.length >0 ,
+          // state is! NewsGetBusinessLoadingState ,
         builder: (context) => ListView.separated(
           //to remove color appear at scroll
           physics: BouncingScrollPhysics(),

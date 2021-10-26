@@ -51,3 +51,9 @@ Widget MyDivider() => Padding(
   child:   Divider(thickness: 1,
                         color: Colors.grey,),
 );
+
+void NavigateTo(context , widget)
+{
+  Navigator.push(context,
+      MaterialPageRoute(builder: (context)=> widget ));
+}
